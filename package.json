@@ -1,0 +1,22 @@
+{
+  "name": "@readable/array-like",
+  "version": "0.0.0",
+  "description": "A set of methods pulled out of Array",
+  "main": "array-like.js",
+  "keywords": [],
+  "author": "Oleg",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^9.0.2"
+  },
+  "scripts": {
+    "lint": "standard array-like.js",
+    "preversion": "npm run lint"
+  },
+  "standard": {
+    "envs": [
+      "browser"
+    ]
+  },
+  "private": true
+}
