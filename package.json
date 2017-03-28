@@ -7,7 +7,7 @@
   "author": "Oleg",
   "license": "MIT",
   "devDependencies": {
-    "standard": "^9.0.2"
+    "standard": "^11.0.1"
   },
   "scripts": {
     "lint": "standard array-like.js",

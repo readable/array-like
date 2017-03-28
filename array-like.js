@@ -1,17 +1,20 @@
 window.Rd = window.Rd || {}
 
-window.Rd.each = function (list, callback) {
-  return Array.prototype.forEach.call(list, callback)
-}
+;(function () {
+  var methodNames = [
+    'every', 'forEach', 'filter', 'find', 'map',
+    'includes', 'reduce', 'slice', 'some'
+  ]
 
-window.Rd.filter = function (list, callback) {
-  return Array.prototype.filter.call(list, callback)
-}
+  methodNames.forEach(function (methodName) {
+    window.Rd[methodName] = function (list, action, optional) {
+      return Array.prototype[methodName].call(list, action, optional)
+    }
+  })
+}())
 
 window.Rd.flatten = function (tree) {
   return Array.prototype.concat.apply([], tree)
 }
 
-window.Rd.toArray = function (list) {
-  return Array.prototype.concat.call([], list)
-}
+// TODO: add Array.prototype.from and Array.prototype.of polyfills
